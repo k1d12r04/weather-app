@@ -1,12 +1,12 @@
 *,
 *::before,
-*::after{
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: "Montserrat", sans-serif;
   color: #fff;
   background-image: url("forest.jpg");
@@ -19,44 +19,51 @@ body{
   text-align: center;
 }
 
-.weather-app{
+.weather-app {
   margin-top: 5rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 
-.weather-app__title{
+.weather-app__title {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.weather-app__input{
+.weather-app__input {
   width: 100%;
-  padding: .5rem;
+  padding: 0.5rem;
   border: none;
   outline: none;
-  border-radius: 1rem;
   padding-inline-start: 1rem;
   color: rgba(25, 23, 23, 0.797);
   font-size: 1rem;
-  transition: box-shadow 0.2s ease-in-out;
+  transition: all .3s ease-in-out;
+  background: transparent;
+  color: #fff;
+  border-bottom: 2px solid #f06595;
 }
 
-.weather-app__input:focus{
+.weather-app__input:focus {
   box-shadow: 0 3px 20px 1px #f06595;
+  border-radius: 0.7rem;
 }
 
-.main{
+.weather-app__input::placeholder {
+  opacity: 1;
+  text-align: center;
+}
+
+.main {
   display: grid;
   gap: 1rem;
 }
 
-.weather-app__temp{
+.weather-app__temp {
   font-size: 1.7rem;
 }
 
-.weather-app__event{
+.weather-app__event {
   font-size: 1.4rem;
 }
-
