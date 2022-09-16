@@ -38,13 +38,14 @@ body {
   outline: none;
   padding-inline-start: 1rem;
   color: rgba(25, 23, 23, 0.797);
-  font-size: 1rem;
+  font-size: 1.2rem;
   transition: all .3s ease-in-out;
   background: transparent;
   color: #fff;
   border-bottom: 2px solid #f06595;
 }
 
+.weather-app__input:hover,
 .weather-app__input:focus {
   box-shadow: 0 3px 20px 1px #f06595;
   border-radius: 0.7rem;
@@ -53,6 +54,7 @@ body {
 .weather-app__input::placeholder {
   opacity: 1;
   text-align: center;
+  font-size: 1.1rem;
 }
 
 .main {
@@ -61,9 +63,17 @@ body {
 }
 
 .weather-app__temp {
-  font-size: 1.7rem;
+  font-size: 3rem;
+  font-weight: bold;
 }
 
 .weather-app__event {
   font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.weather-app__minmax{
+  font-size: 1.2rem;
+  font-weight: 500;
 }
