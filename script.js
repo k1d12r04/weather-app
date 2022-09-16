@@ -1,11 +1,15 @@
 const url = "https://api.openweathermap.org/data/2.5/";
 const key = "be84b9dd7eeb3ac848f9a856d44146d0";
 
+const searchBar = document.getElementById("searchBar");
+const searchBtn = document.getElementById("searchBtn");
+
+
 const setQuery = (e) => {
-  if(e.key == "Enter"){
-    getResult(searchBar.value);
-  }
+  getResult(searchBar.value);
 }
+
+searchBtn.addEventListener("click", setQuery);
 
 const getResult = (cityName) => {
   let query = `${url}weather?q=${cityName}&appid=${key}&units=metric&lang=tr`;
@@ -28,5 +32,4 @@ const displayResult = (result) => {
   minmax.textContent = `${Math.round(result.main.temp_min)}°C / ${Math.round(result.main.temp_max)}°C`;
 }
 
-const searchBar = document.getElementById("searchBar");
-searchBar.addEventListener("keypress", setQuery);
+
